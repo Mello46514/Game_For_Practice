@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfc8jsevm8p72"]
+
+[ext_resource type="PackedScene" uid="uid://cskb58vwrgcaj" path="res://Common files/Test Tiles.tscn" id="1_bm82w"]
+[ext_resource type="PackedScene" uid="uid://0grhjerpqxfx" path="res://Common files/camera_man.tscn" id="2_s2gip"]
+[ext_resource type="PackedScene" uid="uid://diwykp0untbc2" path="res://Common files/Player.tscn" id="3_d1r3c"]
+
+[node name="Game" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_bm82w")]
+layer_0/tile_data = PackedInt32Array(196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 196608, 0, 0, 262143, 0, 0, 262142, 0, 0, 262141, 0, 0, 327677, 0, 0, 327676, 0, 0, 327675, 0, 0, 327674, 0, 0, 262138, 0, 0, 262137, 0, 0, 262139, 0, 0, 262140, 0, 0, 262148, 0, 0, 262149, 0, 0, 262147, 0, 0, 262146, 0, 0, 262145, 0, 0, 262144, 0, 0, 327679, 0, 0, 327678, 0, 0, 327673, 0, 0, 196615, 0, 0, 262151, 0, 0, 262150, 0, 0, 196614, 0, 0, 262136, 0, 0, 327672, 0, 0)
+
+[node name="Camera man" parent="." instance=ExtResource("2_s2gip")]
+
+[node name="Player" parent="." instance=ExtResource("3_d1r3c")]
+position = Vector2(-12, -11)

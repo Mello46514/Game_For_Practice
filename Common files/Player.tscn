@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://diwykp0untbc2"]
+
+[ext_resource type="Script" path="res://uncommon files/Player.gd" id="1_kxwma"]
+[ext_resource type="Texture2D" uid="uid://b7jmyi87ivs7a" path="res://sprites/Line Man.png" id="2_hdxo7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhc8n"]
+size = Vector2(21.9375, 28.875)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_kxwma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14.5625)
+shape = SubResource("RectangleShape2D_fhc8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_hdxo7")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(0.999946, 1.45)
+rect = Rect2(-1, 0, 2, 1)
+
+[node name="C_Time" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://0grhjerpqxfx"]
+
+[ext_resource type="Script" path="res://uncommon files/camera_man.gd" id="1_ykmnx"]
+
+[node name="Camera man" type="Camera2D"]
+script = ExtResource("1_ykmnx")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+scale = Vector2(11.4, 11.4)
+rect = Rect2(-35, -35, 70, 70)
