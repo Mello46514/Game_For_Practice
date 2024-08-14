@@ -5,10 +5,10 @@ var move_power: Vector2 = Vector2.ZERO
 var previous_dir_mov: Vector2 = Vector2.ZERO
 
 # common constants
-const Jump_Pwr: float = 150
-const speed: float = 50
+const Jump_Pwr: float = 750 
+const speed: float = 250
 const friction: float = 0.5
-const grav: float = 2
+const grav: float = 10
 
 func _ready():
 	pass
